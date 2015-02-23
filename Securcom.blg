@@ -1,0 +1,72 @@
+This is BibTeX, Version 0.99d (TeX Live 2013/Debian)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: Securcom.aux
+The style file: IEEEtran.bst
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Database file #1: Securcom.bib
+-- IEEEtran.bst version 1.13 (2008/09/30) by Michael Shell.
+-- http://www.michaelshell.org/tex/ieeetran/bibtex/
+-- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
+Warning--empty journal in Hamdi
+Warning--empty journal in huet
+Warning--empty journal in LeCarpentier
+Warning--empty year in LeCarpentier
+Warning--empty journal in DeLuca
+Name 1 in "Artemiadis, P.K., and K.J. Kyriakopoulos" has a comma at the end for entry Artemiadis
+while executing---line 2419 of file IEEEtran.bst
+Too many commas in name 1 of "Zhang Xu, Chen Xiang, Wang Wen-hui, Yang Ji-hai, Vuokko Lantz, Wang Kong-qiao" for entry Zhang
+while executing---line 2419 of file IEEEtran.bst
+Too many commas in name 1 of "Zhang Xu, Chen Xiang, Wang Wen-hui, Yang Ji-hai, Vuokko Lantz, Wang Kong-qiao" for entry Zhang
+while executing---line 2419 of file IEEEtran.bst
+Too many commas in name 1 of "Zhang Xu, Chen Xiang, Wang Wen-hui, Yang Ji-hai, Vuokko Lantz, Wang Kong-qiao" for entry Zhang
+while executing---line 2419 of file IEEEtran.bst
+Warning--empty journal in Zhang
+Warning--empty year in Zhang
+
+Done.
+You've used 13 entries,
+            4039 wiz_defined-function locations,
+            885 strings with 9249 characters,
+and the built_in function-call counts, 5565 in all, are:
+= -- 464
+> -- 67
+< -- 22
++ -- 36
+- -- 14
+* -- 241
+:= -- 1032
+add.period$ -- 26
+call.type$ -- 13
+change.case$ -- 13
+chr.to.int$ -- 30
+cite$ -- 20
+duplicate$ -- 486
+empty$ -- 490
+format.name$ -- 15
+if$ -- 1203
+int.to.chr$ -- 0
+int.to.str$ -- 13
+missing$ -- 80
+newline$ -- 62
+num.names$ -- 13
+pop$ -- 189
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 2
+skip$ -- 440
+stack$ -- 0
+substring$ -- 93
+swap$ -- 295
+text.length$ -- 12
+text.prefix$ -- 0
+top$ -- 5
+type$ -- 13
+warning$ -- 7
+while$ -- 22
+width$ -- 15
+write$ -- 131
+(There were 4 error messages)
