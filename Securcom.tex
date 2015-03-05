@@ -652,14 +652,25 @@ a full rectification generates the absolute value of EMG signal. Two phases can 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsubsection{Filter and Linear envelope of the EMG signal } \label{sub:LinearenvelopeoftheEMGsignal}\par
-Filtering the signal serves to eliminate the unwanted noise, There are three types of noise in a the EMG signal, \par
-Bio-electrical noise: that is produced by biological functions, heartbeat, breathing and it can be minimized with good electrodes placement.\par
+\par Filtering the signal serve to eliminate unwanted noise, there are three types of noise in the EMG signal which are, \par
 
-Equipment noise: it is a noise due to the wires movement, electrodes, skin and amplifiers. the wires noise have a low frequency (10-20 Hz), so filtering at 20 Hz eliminates them. The amplifier's noise is of higher frequencies and it can be found in the upper part of the frequency spectrum of the EMG signal.\par
+Bio-electric noise: that produced by biological functions like, heartbeat, breathing, blood flow velocity and measured skin temperatures, this noise can be minimized with good placement of the electrode and high quality instruments.\par
 
-External noise: All electrical and electromagnetic interference, it can be minimized with a good grounding (GND)
+Equipment noise: movement of the cable connecting the electrode to the amplifier and the interface between the detection surface of the electrode and the skin creates motion artifacts. Muscle fibers generate electric activity whenever muscles are active. This noise can be reduced by using high quality electronic components and by low pass filter at 20 Hz.\par
 
-Filters reduce the amplitude of the signal at a given frequency (cutoff frequency), we have used a low pass filter for our treatment of the EMG signal. The cutoff low-pass frequency is often set at around 250 Hz for surface electrode. The linear envelope is the result of a full rectification and low-pass filtering at sampling frequency 2000 Hz, as we can see in figure~\ref{fig:env}.\par
+The outside noise: it represent all electrical and electromagnetic interference. It can be minimized with a grounding (GND).\par
+
+Filter reduces the amplitude of the signal at a given frequency (cutoff frequency), we have used a butter low pass filter for our treatment of EMG signal (a butter filter is a type of linear filter is designed to obtain a constant gain as possible in its bandwidth). The results achieved by using the following equation : \par
+
+      [b,a]=butter(n,w,ftype)
+      
+      [b,a]= Transfer function coefficients of the filter, returned as row vectors
+       n = Filter order
+       w= cutoff frequency/sampling frequency
+       ftype= Filter type
+      
+
+The cutoff frequency low-pass is often set at around 250 Hz for surface electrode, the linear envelope is the result of a full rectification and low-pass filtering at sampling frequency 2000 Hz, the filter of order 5 and filter type is 'low', as we can see the results in figure~\ref{fig:env}.\par
 
 \begin{figure}
     \hspace*{1.2 cm}
