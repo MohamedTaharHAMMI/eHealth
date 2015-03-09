@@ -21,10 +21,6 @@
 \providecommand{\BIBdecl}{\relax}
 \BIBdecl
 
-\bibitem{Konte}
-C.~Konte, ``Modelisation de l'attenuation du signal emg diaphragmatique de
-  surface,'' \emph{Bioengineering}, no. 133, pp. 3--4, 2010.
-
 \bibitem{Patricia}
 e.~a. Patricia F.~Adams, ``Current estimates from the national health interview
   survey,'' \emph{Vital and Health Statistics}, 1996.
@@ -75,8 +71,5 @@ C.~N. M.~Atieh, P.Y.~Glorennec, ``Commande myoelectrique d'une prothese de main
 P.~Konrad, ``{The ABC of EMG: Practical Introduction to Kinesiological
   Electromyography},'' \emph{Journal of Medical Signals and Sensors}, vol.~3,
   no.~60, p.~40, 2005.
-
-\bibitem{Doc}
-qt.org, ``Qt documentation,'' http://doc.qt.io/qt-5/index.html, 2015.
 
 \end{thebibliography}

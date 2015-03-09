@@ -529,12 +529,9 @@ The EMG signals acquired from muscles are used in high-tech fields such as augme
 biomedical, gaming, 3D animations and human-machine interfaces. The latter are used especialy
 for helping people with reduced mobility or having special needs to control machines. 
 The purpose of this paper is to realise a novel, flexible and efficient EMG-based system in order to control 
-a multimedia, using a microcontroller. A comparison study is also given to show the utility of the application, 
-then numerous evaluations were provided to validate our apporoach. Finaly a real implementation of the application
-is realised.
-
-
-In order to validate our proposal, firstly, .\par
+a multimedia systems. A comparison study is also given to show the utility of the application, 
+then numerous evaluations were provided to validate our apporoach. A real implementation of the application
+is realised, and validated with many tests. Finaly we present our experimental results and the future works\par
 
 \end{abstract}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -546,17 +543,24 @@ EMG, muscle, signal processing, media player, control interface
 \section{Introduction}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%ffffff%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-The discovery of the Electromyogram (EMG) signal was in 1666, when the Italian "Francesco Redi" has shown that the muscle can generate an electric current. After two centuries,  in 1849, the German-French researcher "Dubois-Reymond" was the first whom realized the first record of an EMG signal.
+%The discovery of the Electromyogram (EMG) signal was in 1666, when the Italian "Francesco Redi" has shown that the muscle can generate an electric current. After two centuries,  in 1849, the German-French researcher "Dubois-Reymond" was the first whom realized the first record of an EMG signal.
 
-The EMG signal is generated as a result of a depolarization followed by a repolarization that happen at the entrance of the sodium in the interior of the cell membrane of a skeletal muscle fiber, and release potassium to the outside. ~\cite{Konte}. \par
+%The EMG signal is generated as a result of a depolarization followed by a repolarization that happen at the entrance of the sodium in the interior of the cell membrane of a skeletal muscle fiber, and release potassium to the outside. ~\cite{Konte}. \par
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-Nowadays, the EMG signal provides an intelligent and natural way of a human machine interaction, which can be a good solution to replace conventional controls interfaces and allows some categories of users the opportunity to exploit the new technologies. Amputation and deformity have been dealt with, one way or
-another, throughout the ages. More than one million individuals in the United States today are living with limb amputations ~\cite{Patricia}, in which there are approximately
-100,000 patients with an upper limb amputation. According to~\cite{China} approximately 8\% of physical disables, or 2.26 million people,
-live with limb amputations in China alone. Natural disasters and accidents have been making this number increase.
+The EMG signal provides an intelligent and natural way of a human machine interaction, which can be a good solution to replace conventional controls interfaces and allows some categories of users the opportunity to exploit the new technologies.
+In augmented reality, by implanting electrodes in different ways in the human body, especialy in his feets, legs, arms, hands, and his face we can create a virtual human user, witch has a total control of his body members.
+We can find the EMG technology in the Control Command field. In nuclear power plants or in the big factories, for some critical and dangerous tasks emploies use EMG-based robots, witch allows more security and safety.
+The EMG technology is used also in biomedical field, gaming field, 3D animations and human-machine interfaces field.\par
+Amputation and deformity have been dealt with, one way or
+another, throughout the ages. More than one million individuals in the United States today are living with limb 
+amputations ~\cite{Patricia}, in which there are thousands patients with an upper limb amputation.
+According to~\cite{China} approximately 8\% of physical disables, or 2.26 million people,
+live with limb amputations in China alone. Natural disasters and accidents have been making this number increase. For this reason, over the years many searchers 
+have focused on the creation of artificial limbs and the realisation of Human Machine interfaces controled by the EMG signal, which can be one of the most interesting solutions. 
+The use of EMG is not limited, which is explained by the diversity of the applications that we can be found today.
 \par
-The use of EMG is not limited to the field of medicine, but it is also convenient for the other technology fields, which is explained by the diversity of the applications that we can be found today.
+
 \par
 %Electromyography (EMG) is a technique for evaluating and recording the electrical activity, is realized by using an instrument called an electromyograph, to produce a record called an electromyogram. \par
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%fffff%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -565,19 +569,19 @@ Our study is focused on the EMG signals generated by a human hand or arm.  We ai
 
 
 The rest of this paper is organized as follows.
-Section~\ref{sec:related} reviews relevant related work and different existing approaches for exploiting the EMG signals. Section~\ref{sec:proposedapproach} presents our approach for using the EMG signals to take control over a multimedia application that we have implemented in C++, and we present some tests that we have done and their results . Section~\ref{sec:conclusion} concludes this paper and presents some perspectives for our futur work.\par
+Section~\ref{sec:related} reviews relevant related work and different existing approaches for exploiting the EMG signals. Section~\ref{sec:proposedapproach} presents our approach for using the EMG signals to take control over a multimedia application, and we present some tests that we have done and their results . Section~\ref{sec:conclusion} concludes this paper and presents some perspectives for our futur work.\par
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Related work} \label{sec:related}
 
 
-Numerous studies have been made in the area of EMG. ~\cite{Hamdi} showed that the EMG allows to measure the facial electrical activity of muscles via electrodes placed on the face, this measure can be used for expressions recognition. From this facial expressions we can distinguish a stress which causes an increase muscular activity and many others expressions as negative valence, lack of motivation ...ect. \par
+Numerous studies have been made in the area of EMG. Authors in ~\cite{Hamdi} showed that the EMG allows to measure the facial electrical activity of muscles via electrodes placed on the face, this measure can be used for expressions recognition. From this facial expressions we can distinguish a stress which causes an increase muscular activity and many others expressions as negative valence, lack of motivation,.etc. \par
 
-Its approach consists to realise an immersive simulation platform for job interviews, which is based on a set of sensors which are used to acquire physiological signals (EMG, ECG ...). These signals are processed as follows (extraction, characteristics, classification and performance evaluation of classifiers). The purpose of this platform is to improve the candidate's behavioral skills and training him to manage his emotional state by using the data that is gathered from him.\par
+Its approach consists to realise an immersive simulation platform for job interviews, which is based on a set of sensors which are used to acquire physiological signals (EMG, ECG,.etc). These signals are processed as follows (extraction, characteristics, classification and performance evaluation of classifiers). The purpose of this platform is to improve the candidate's behavioral skills and training him to manage his emotional state by using the data that is gathered from him.\par
 
 The system can give a misinterpretation of the user's face, but in general it remains a good work that brings a new solution that did not exist before, which can be very handy if some improvements were added.\par
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-The EMG signal can enable better monitoring of the contraction's evolution during the pregnancy~\cite{Chendab} .\par Indeed, the precocious detection of premature child-birth is the key of prevention. The treatment method of EMG uterine for detecting and identifying the pertinent events is based on the wavelet packets.
+The EMG signal can enable better monitoring of the contraction's evolution during the pregnancy~\cite{Chendab} .\par Indeed, the precocious detection of premature birth is the key of prevention. The treatment method of EMG uterine for detecting and identifying the pertinent events is based on the wavelet packets.
 The author propose two approaches for an EMG uterine decomposition, discrete wavelet decomposition which consists to decompose the EMG signal according to the scale levels. this scale interprets any change in frequency or energy signal. And the second approach is the wavelet packet decomposition which is based on the construction of sub-basic functions organized into packets.
 These approachs permit to choose the most pertinent packages for the good detection and classification of an EMG uterine. Furthermore, we can use other types of frequency wavelet that are more selective.\par
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -612,17 +616,16 @@ In this paper, we aim to develop an application that control set of medias by us
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 The control strategies of the application use three electrodes placed on the skin surface overlying the
-muscles of the arm in order to gather the EMG signals. In this section we will explain the signal processing in details :
+muscles of the arm in order to gather the EMG signals. In this section we will explain the signal processing in details and then the implementation of the system.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Electromyography Signal Treatment} \label{sub:EMGsignaltreatment}\par
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 Herein, we present the analysis of the EMG data that we have achieved on the data collected from the arm muscle by three surface electrodes placed on the skin.\par
 The EMG signals acquired from muscles require advanced methods for processing which are as follows (loading, rectification, filter, linear envelope and fourier transform) showed in figure~\ref{fig:struct}. The purpose of this treatment is to turn the signals into a usable form  for registration or correlation purposes.\par
 
 \begin{figure}[!hb]
-    \includegraphics[scale=0.45]{fig0.png}
+    \includegraphics[scale=0.45]{Figures/fig0.png}
     \caption{EMG signal processing diagram}
     \label{fig:struct}
 \end{figure}
@@ -630,63 +633,52 @@ The EMG signals acquired from muscles require advanced methods for processing wh
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsubsection{Loading the EMG data} \label{sub:LoadingtheEMGdata}\par
-this step is a presentation of the data without processing, except an amplification of the signal that can be added by the electrode. The raw signal is presented in figure~ \ref{fig:data} in this graph we can see the highest peak which represents a muscle contraction that have a value comprised between (1.2 and 0.5) and 0 represents the muscle rest period.\par
+This step is a presentation of the data without processing, except an amplification of the signal that can be added by the electrode. The raw signal is presented in figure~\ref{fig:data} .\par
 
 \begin{figure}[!hb]
     \hspace*{1.2 cm}
-    \includegraphics[scale=0.40]{fig1.png}
+    \includegraphics[scale=0.40]{Figures/fig1.eps}
     \caption{EMG Data}
     \label{fig:data}
 \end{figure}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsubsection{Rectification of the EMG signal} \label{sub:RectificationtheEMGsignal}\par
-a full rectification generates the absolute value of EMG signal. Two phases can be distinguished to obtain the rectified signal as follows: eliminate the shift signal and calculate the absolute value of the signal. the results are showed in figure~\ref{fig:rect}. We note that there is no negative value. \par
+\subsubsection{Rectification the EMG signal} \label{sub:RectificationtheEMGsignal}\par
+A full rectification generates the absolute value of the EMG signals, it can be also called an average value. Two phases can be distinguished to obtain the average value, as follows: eliminating the offset signal by removing the dc-offset and calculating the absolute value. the results are showed in figure~\ref{fig:rect}.\par
 
 \begin{figure}
     \hspace*{1.2 cm}
-    \includegraphics[scale=0.40]{fig2.png}
+    \includegraphics[scale=0.40]{Figures/fig2.eps}
     \caption{the EMG signal Rectification}
     \label{fig:rect}
 \end{figure}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsubsection{Filter and Linear envelope of the EMG signal } \label{sub:LinearenvelopeoftheEMGsignal}\par
-\par Filtering the signal serve to eliminate unwanted noise, there are three types of noise in the EMG signal which are, \par
+Filtering the signal serves to eliminate the unwanted noise, There are three types of noise in a the EMG signal, \par
+Bio-electrical noise: that is produced by biological functions, heartbeat, breathing and it can be minimized with good electrodes placement.\par
 
-Bio-electric noise: that produced by biological functions like, heartbeat, breathing, blood flow velocity and measured skin temperatures, this noise can be minimized with good placement of the electrode and high quality instruments.\par
+Equipment noise: it is a noise due to the wires movement, electrodes, skin and amplifiers. the wires noise have a low frequency (10-20 Hz), so filtering at 20 Hz eliminates them. The amplifier's noise is of higher frequencies and it can be found in the upper part of the frequency spectrum of the EMG signal.\par
 
-Equipment noise: movement of the cable connecting the electrode to the amplifier and the interface between the detection surface of the electrode and the skin creates motion artifacts. Muscle fibers generate electric activity whenever muscles are active. This noise can be reduced by using high quality electronic components and by low pass filter at 20 Hz.\par
+External noise: All electrical and electromagnetic interference, it can be minimized with a good grounding (GND)
 
-The outside noise: it represent all electrical and electromagnetic interference. It can be minimized with a grounding (GND).\par
-
-Filter reduces the amplitude of the signal at a given frequency (cutoff frequency), we have used a butter low pass filter for our treatment of EMG signal (a butter filter is a type of linear filter is designed to obtain a constant gain as possible in its bandwidth). The results achieved by using the following equation : \par
-
-      [b,a]=butter(n,w,ftype)
-      
-      [b,a]= Transfer function coefficients of the filter, returned as row vectors
-       n = Filter order
-       w= cutoff frequency/sampling frequency
-       ftype= Filter type
-      
-
-The cutoff frequency low-pass is often set at around 250 Hz for surface electrode, the linear envelope is the result of a full rectification and low-pass filtering at sampling frequency 2000 Hz, the filter of order 5 and filter type is 'low', as we can see the results in figure~\ref{fig:env}.\par
+Filters reduce the amplitude of the signal at a given frequency (cutoff frequency), we have used a low pass filter for our treatment of the EMG signal. The cutoff low-pass frequency is often set at around 250 Hz for surface electrode. The linear envelope is the result of a full rectification and low-pass filtering at sampling frequency 2000 Hz, as we can see in figure~\ref{fig:env}.\par
 
 \begin{figure}
     \hspace*{1.2 cm}
-    \includegraphics[scale=0.40]{fig3.png}
+    \includegraphics[scale=0.40]{Figures/fig3.eps}
     \caption{Linear envelope}
     \label{fig:env}
 \end{figure}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsubsection{Fourier Transform (FFT) of the EMG signals} \label{sub:FourierTransform(FFT)oftheEMGsignals}
-\par TThe power distribution of the EMG signal can be calculated by the “Fast Fourier Transformation” (FFT) and graphically presented as a total power
-spectrum of the EMG signal in figure~\ref{fig:spectre}, which shows the frequency power distribution (Y-axis) in ratio to the amplitude (X-axis), the surface EMG frequency power is located between 0 and 200 Hz as we can see in the graph. The purpose of this treatment step is to analyse muscle fatigue.\par
+\par The Total Power Spectrum can be calculated by two frequency parameters: Mean Frequency of the FFT as the mathematical mean of the spectrum curve, Total Power as a the integral under the spectrum curve and Median Frequency of the FFT as the parameter that divides the Total Power area into two equal parts~\cite{Konrad} presented in figure~\ref{fig:spectre}. \par
+Finally the maximum value of the Total Power Spectrum curve can be used to describe frequency characteristics. Within applied EMG-frequency analysis the most important parameters are the mean and the median frequency and their time domain changes in sustained contractions, which is often employed for analysing muscle fatigue.\par
 
 \begin{figure}
     \hspace*{1.2 cm}
-    \includegraphics[scale=0.40]{fig4.png}
+    \includegraphics[scale=0.40]{Figures/fig4.eps}
     \caption{Power Spectrum}
     \label{fig:spectre}
 \end{figure}
@@ -694,61 +686,110 @@ spectrum of the EMG signal in figure~\ref{fig:spectre}, which shows the frequenc
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Implementation}\par
-
+The user of the application should place three electrodes in his arm, which consists to acquire and amplifie the EMG signal gathered from muscles. 
+The signal is processed and filtered, then during a contraction, we can find different values depending to the strength of the contraction. 
+First to show the contractions to the user we have used a "LED", which turns "ON" in case of a contraction, and "OFF" otherwise.\par
+Then we developed a basic mediaplayer, controlled by the same principle of the LED with just one command allowing to star a media. In other words
+when the user make a contraction, there is signal sent into the application and get started the media.
+Figure~\ref{fig:example} show an exemple of use of the application. \par
+\par
 Figure~\ref{fig:architecture} shows the architecture of our system:
 
 \begin{figure}[!hb]
-    \includegraphics[scale=0.23]{architecture.png}
+    \includegraphics[scale=0.23]{Figures/architecture.eps}
     \caption{System architecture}
     \label{fig:architecture}
 \end{figure}
-
-
-As seen, the EMG signal is recovered and amplified from muscles via electrodes (3 channels: GND, E and M). Then processed and filtered (as explained above) by the eHealth platform (OLIMEX) attached to a micro-controller (Arduino), this equipement is used to interpret the signal as two values ("ON" and "OFF"), during a contraction a LED turns "ON", and "OFF" in case of rest, this allows the visibility of system operations for the user. The micro-controller can also transfer the filtered signal to our application (C++). This applications gets the signal using a module which is specific for recieving the data from the Serial Port.\par
-As mentionned before, the application is written in Qt C++. Qt is a full development framework with tools designed to streamline the creation of applications and user interfaces for desktop, embedded, and mobile platforms ~\cite{Doc}. In our application, we have used 3 modules: QtGui for building the graphical interface, QtCore module which contains core non-GUI functionalities and finaly, Qt phonon module for multimedia applications.
-\par
-The filtered signal was recovered in a binary form and then, was taken as input data. We started by using its strength as a parameter, so we have devided our signal into two intervals ]l,m] and ]m,n[, which can be interpreted as two commands, the first one is to start the media, and the second one, to switch from one track to another. Figure~\ref{fig:example} show an exemple of use of the application.
-
+ 
 \begin{figure}[!hb]
-    \includegraphics[scale=0.30]{app2.png}
+    \includegraphics[scale=0.30]{Figures/app2.png}
     \caption{Example of use case}
     \label{fig:example}
 \end{figure}
+So here the user launches the command to start the media, 
+we can see also the different components of the interface : a progress bar and an LCDNumber for displaying the signal strength of the user, 
+a button to choose the media, and the media viewer.\par
 
-So here the user launches the first command to start the first media, we can see also the different components of the interface : a progress bar and an LCDNumber for displaying the signal strength of the user, a button to choose a list of media, and the media viewer. In other words, the user selects a list of media and then controls the mediaplayer with his EMG signal.
-\par
-To better understand the application's architecture, the following class diagram (Figure~\ref{fig:diagram}) models the multimedia application structure. The "main" class is associated with the "QApplication" and the "control" class which inherits from the "QObject" and is associated with the "QSerialPort" and the "Thread" classes. The "Thread" class inherits from the "QWidget" class and is associated with the "QThread" and the "scene" classes. Finaly, the "scene" class inherits from the "Ui::scene" and the "QMainWindow" classes (this is what we call a multiple inheritance in C++) and is associated with the "phonon" and the "multimedia" classes .
-
-\begin{figure}[!hb]
-    \includegraphics[scale=0.30]{app3.png}
-    \caption{class diagram of the C++ application}
-    \label{fig:diagram}
-\end{figure}
-
-After we tried enhancing and adding new functionalities and, in the same time, keeping the user-friendly side of the system.\par
-First, we have done studies on some existing methods allowing an intuitive detection of the location of electrodes and their adaptation with the arm of the user. This step is very important, because The shape and the amplitude of the EMG signal are influenced by the location of the electrodes. Therefore the amplitude of the recorded signal decreases exponentially with respect to the distance between the electrodes and the source of electrical activity. This requires setting up a correction method to simplify the eletrodes placement.\par
-Men, Women and children do not have the same EMG signals strength, which requires a learning phase that permits the adaptation of the strength threshold with the proper user. so the approach is that the user -before using the application- has to have some tests done in order to know to which cluster he belongs and that can be done by using a classifiction algorithm (ie : k-means). And, once the category of the user is determined, the system adapts the threshold according to the user.\par
-
-Then, several functionnalities can be added, hence, creating other commands according to three parameters : "Force", "Timing" and "Contraction frequency". So in our application we need to create four commands, C1 : to start the first media or to get the following ones, C2 : to return to the previous media, C3: to pause the media or to continue, C4 : to stop the media.
+To enhance the application and to make it more flexibale and useful, we have added a lot of options. So first, we have done studies on some existing 
+methods allowing an intuitive detection of the location of electrodes and their adaptation with the arm of the user. This step is very important, because The 
+shape and the amplitude of the EMG signal are influenced by the location of the electrodes. Therefore the amplitude of the recorded signal decreases 
+exponentially with respect to the distance between the electrodes and the source of electrical activity. This required setting up a correction method to 
+simplify the eletrodes placement, in our case we opted for clustering algorithmes (K-means).\par
+The users (man, woman and child) do not have the same EMG signals strength, in addition it may be that the same user does not have the same force when he is
+fit and when he is tired. Which requires a learning phase that permits the adaptation of the strength threshold with the proper user. So the user -before 
+commanding the application- has to do some tests in order to know to which cluster he belongs. In this phase we also used k-means for the classifiction of
+the individual. And, once the category of the user is determined, the system adapts the threshold according to the user.\par
+Then, several fonctionalities were added, like stop media, change it, come back to the previous one,.etc, while, at the same time, keeping the user-friendly side of the system. 
+Thus, creating other commands was realised according to three parameters : "Force", "Timing" and "Contraction frequency". So in our application we need to 
+create four commands, C1 : to start the first media or to get the following ones, C2 : to return to the previous media, C3: to pause the media or to continue,
+C4 : to stop the media.
 
 \begin{table}[h]
     \hspace*{0 cm}
-    \includegraphics[scale=0.50]{Tableau.png}
+    \includegraphics[scale=0.50]{Figures/Tableau.eps}
     \caption{Commands classification}
     \label{tab:classification}
 \end{table}
 
-Table~\ref{tab:classification} shows the combination of different parameters allowing the creation of new commands. When the Force can take two values "Strong" and "Weak", the Timing can take two intervales "<T" and ">T" where T is the time (in seconds) of maintaining the contraction, and F=1, F=2 are respectively Frequency = 1 and Frequency = 2, it's important to know that we must define a maximum time "t" between two frequencies to make the difference between "one command with two frequencies" and between "two different commands". With this combination we can find four commands without any ambiguity. So we can interpret the table as follows : C1(Start|Next) =  W + <T, C2(Previous
+Table~\ref{tab:classification} shows the combination of different parameters allowing the creation of new commands. Where the Force can take two values 
+"Strong" and "Weak", the Timing can take two intervales "[0,T[" and "[T,+inf[" where T is the time (in seconds) of maintaining the contraction, and F1, F2 are
+respectively Frequency = 1 and Frequency = 2. We have defined "t" the maximum period between two frequencies to make the difference
+between "one command with two frequencies" and between "two different commands", "t" hase been defined based on many tests (detailed on ~\ref{tab:experimentalResearch}).
+With this combination of parameters, we have created four commands (six fonctionalities) without any ambiguity.
+So we can interpret the table as follows : C1(Start|Next) =  W + <T, C2(Previous
 ) = (2W|2S|S+W)+(<T|T>) which "|" means "or", C3(Pause|Continue) = W + >T, Finally C4(Stop) = S + >T.\par
-Then, for a more simplicity, especially for people who cannot move their fingers, we can use a dynamic media list, by creating a file or a database containing links (URLs) downloaded and updated automatically from the Internet.\par
-Finally, we made our tests by using wired electrodes that will be replaced later by wireless electrodes, which gives more flexibility, light weight and robustness to our system.\par
+Then, for a more simplicity, especially for people who cannot move their fingers, we can use a dynamic media list, by creating a file or a database containing
+links (URLs) downloaded and updated automatically from the Internet.\par
+Finally, we made our tests by using wired electrodes that will be replaced later by wireless electrodes, which gives more flexibility, 
+light weight and robustness to our system.\par
+
+
+
+\section{Experimental researches} \label{sec:experimentalResearch}
+In our application, we have used 3 modules: Gui for building the graphical interface, Core module which contains core non-GUI functionalities and finaly,
+phonon module for multimedia applications.
+To understand the application's architecture, the following class diagram (Figure~\ref{fig:diagram}) models the multimedia application structure. 
+The "main" class is associated with the "QApplication" and the "control" class which inherits from the "QObject" and is associated with the "QSerialPort"
+and the "Thread" classes. The "Thread" class inherits from the "QWidget" class and is associated with the "QThread" and the "scene" classes. Finaly, the 
+"scene" class inherits from the "Ui::scene" and the "QMainWindow" classes  and is associated with the "phonon" and the "multimedia" classes .
+
+\begin{figure}[!hb]
+    \includegraphics[scale=0.30]{Figures/app3.eps}
+    \caption{class diagram of the application}
+    \label{fig:diagram}
+\end{figure}
+
+
+COOOMMMMENT on a choisi le seuil
+\begin{figure}[!hb]
+    \includegraphics[scale=0.30]{Figures/contractions.eps}
+    \caption{class diagram of the application}
+    \label{fig:contractionsGraph}
+\end{figure}
+
+EEEEEVVVVValuation
+\begin{figure}[!hb]
+    \includegraphics[scale=0.30]{Figures/Roc.eps}
+    \caption{class diagram of the application}
+    \label{fig:rocGraph}
+\end{figure}
+
+IIIIILLLLL va faloir que je parle ddu choix du timing et du fréquence. et comment j'ai mis le >T et <T et le "t" et en fonction de quoi.
+
++Référence à corrigé. 
+
+
 
 \section{Conclusion and futur works} \label{sec:conclusion}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-In this paper, we proposed an approach to control a media player by using the EMG signals. Before exploiting the EMG signals, it has to go through some specific processing steps in order to have better results. The approach is designed to provide a control interface destined especially for people with reduced mobility. We have done a real implementation of the application using the OLIMEX eHeath platform, arduino and Qt C++ languages.
-To create commands, we have combinated different parameters in order to get a performed interface without any ambiguity on controling it. Our experimental results show that this proposed approach realises an intuitive and user-friendly human machine interface, and it is able to achieve a good performance.
-Our future work will focus on the adaptation of this remote on handling multiple applications at once, such as controlling a TV, turn ON and OFF the light of the room, start the robotic vacuum cleaner..etc, while, at the same time,  keeping the flexibility of the system.
+In this paper, we proposed an approach to control a media player by using the EMG signals. Before exploiting the EMG signals,
+it has to go through some specific processing steps in order to have better results. The approach is designed to provide a control interface
+destined especially for people with reduced mobility. 
+Thus we have done a real implementation of the application. To create commands, we have combinated different parameters in order to get a performed
+interface without any ambiguity on controling it. 
+Our experimental results show that this proposed approach realises an intuitive and user-friendly human machine interface, and it is able to achieve a
+good performance. Our future work will focus on the adaptation of this remote on handling multiple applications at once, such as controlling a TV,
+turn ON and OFF the light of the room, start the robotic vacuum cleaner,.etc, while, at the same time, keeping the flexibility of the system.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 

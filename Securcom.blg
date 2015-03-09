@@ -28,45 +28,45 @@ Warning--empty journal in Zhang
 Warning--empty year in Zhang
 
 Done.
-You've used 13 entries,
+You've used 11 entries,
             4039 wiz_defined-function locations,
-            885 strings with 9249 characters,
-and the built_in function-call counts, 5565 in all, are:
-= -- 464
-> -- 67
-< -- 22
-+ -- 36
-- -- 14
-* -- 241
-:= -- 1032
-add.period$ -- 26
-call.type$ -- 13
-change.case$ -- 13
-chr.to.int$ -- 30
-cite$ -- 20
-duplicate$ -- 486
-empty$ -- 490
-format.name$ -- 15
-if$ -- 1203
+            872 strings with 9073 characters,
+and the built_in function-call counts, 4616 in all, are:
+= -- 381
+> -- 56
+< -- 17
++ -- 30
+- -- 12
+* -- 205
+:= -- 862
+add.period$ -- 22
+call.type$ -- 11
+change.case$ -- 11
+chr.to.int$ -- 21
+cite$ -- 18
+duplicate$ -- 408
+empty$ -- 405
+format.name$ -- 13
+if$ -- 989
 int.to.chr$ -- 0
-int.to.str$ -- 13
-missing$ -- 80
-newline$ -- 62
-num.names$ -- 13
-pop$ -- 189
+int.to.str$ -- 11
+missing$ -- 66
+newline$ -- 56
+num.names$ -- 11
+pop$ -- 158
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 2
-skip$ -- 440
+skip$ -- 362
 stack$ -- 0
-substring$ -- 93
-swap$ -- 295
-text.length$ -- 12
+substring$ -- 70
+swap$ -- 242
+text.length$ -- 10
 text.prefix$ -- 0
 top$ -- 5
-type$ -- 13
+type$ -- 11
 warning$ -- 7
-while$ -- 22
-width$ -- 15
-write$ -- 131
+while$ -- 17
+width$ -- 13
+write$ -- 113
 (There were 4 error messages)

@@ -13,7 +13,7 @@
    
 
    %%%%%%%%%Linear Envelope of the EMG signal%%%%%%%
-   [b,a]=butter(5,250/2000,'low'); %  la fréquence de coupure est de 250Hz,la fréquence d'échantillonnage est de 2000 Hz, le filtre d'ordre 5.
+   [b,a]=butter(5,250/1000,'low'); %  la fréquence de coupure est de 250Hz,la fréquence d'échantillonnage est de 1000 Hz, le filtre d'ordre 5.
    filter_y=filtfilt(b,a,rec_y);
     
    %plot (filter_y)
