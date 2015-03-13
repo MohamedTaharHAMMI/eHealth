@@ -667,10 +667,10 @@ Filter reduces the amplitude of the signal at a given frequency (cutoff frequenc
 
       [b,a]=butter(n,w,ftype)
 
-      [b,a]= Transfer function coefficients of the filter, returned as row vectors
-      n = Filter order
+      [b,a]= transfer function coefficients of the filter, returned as row vectors
+      n = filter order
       w= cutoff frequency/sampling frequency
-      ftype= Filter type
+      ftype= filter type \par
 
 
 The cutoff frequency low-pass is often set at around 250 Hz for surface electrode, the linear envelope is the result of a full rectification and low-pass filtering at sampling frequency 1000 Hz, the filter of order 5 and filter type is 'low' we can see the results in figure~\ref{fig:env}, 
