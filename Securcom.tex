@@ -633,7 +633,7 @@ The EMG signals acquired from muscles require advanced methods for processing wh
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsubsection{Loading the EMG data} \label{sub:LoadingtheEMGdata}\par
-This step is a presentation of the data without processing, except an amplification of the signal that can be added by the electrode. The raw signal is presented in figure~\ref{fig:data} .\par
+this step is a presentation of the data without processing, except an amplification of the signal that can be added by the electrode. The raw signal is presented in figure~ \ref{fig:data} in this graph we can see the highest peak which represents a muscle contraction that have a value comprised between (1.2 and 0.5) and 0 represents the muscle rest period.\par
 
 \begin{figure}[!hb]
     \hspace*{1.2 cm}
@@ -643,8 +643,8 @@ This step is a presentation of the data without processing, except an amplificat
 \end{figure}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsubsection{Rectification the EMG signal} \label{sub:RectificationtheEMGsignal}\par
-A full rectification generates the absolute value of the EMG signals, it can be also called an average value. Two phases can be distinguished to obtain the average value, as follows: eliminating the offset signal by removing the dc-offset and calculating the absolute value. the results are showed in figure~\ref{fig:rect}.\par
+\subsubsection{Rectification of the EMG signal} \label{sub:RectificationtheEMGsignal}\par
+a full rectification generates the absolute value of EMG signal. Two phases can be distinguished to obtain the rectified signal as follows: eliminate the shift signal and calculate the absolute value of the signal. the results are showed in figure~\ref{fig:rect}.\par
 
 \begin{figure}
     \hspace*{1.2 cm}
@@ -655,14 +655,24 @@ A full rectification generates the absolute value of the EMG signals, it can be 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsubsection{Filter and Linear envelope of the EMG signal } \label{sub:LinearenvelopeoftheEMGsignal}\par
-Filtering the signal serves to eliminate the unwanted noise, There are three types of noise in a the EMG signal, \par
-Bio-electrical noise: that is produced by biological functions, heartbeat, breathing and it can be minimized with good electrodes placement.\par
+filtering the signal serve to eliminate unwanted noise, there are three types of noise in the EMG signal which are, \par
+Bio-electric noise: that produced by biological functions like, heartbeat, breathing, blood flow velocity and measured skin temperatures, this noise can be minimized with good placement of the electrode and high quality instruments.\par
 
-Equipment noise: it is a noise due to the wires movement, electrodes, skin and amplifiers. the wires noise have a low frequency (10-20 Hz), so filtering at 20 Hz eliminates them. The amplifier's noise is of higher frequencies and it can be found in the upper part of the frequency spectrum of the EMG signal.\par
+Equipment noise: movement of the cable connecting the electrode to the amplifier and the interface between the detection surface of the electrode and the skin creates motion artifacts. Muscle fibers generate electric activity whenever muscles are active. This noise can be reduced by using high quality electronic components and by low pass filter at 20 Hz.\par
 
-External noise: All electrical and electromagnetic interference, it can be minimized with a good grounding (GND)
+The outside noise: it represent all electrical and electromagnetic interference. It can be minimized with a grounding (GND).\par
 
-Filters reduce the amplitude of the signal at a given frequency (cutoff frequency), we have used a low pass filter for our treatment of the EMG signal. The cutoff low-pass frequency is often set at around 250 Hz for surface electrode. The linear envelope is the result of a full rectification and low-pass filtering at sampling frequency 2000 Hz, as we can see in figure~\ref{fig:env}.\par
+Filter reduces the amplitude of the signal at a given frequency (cutoff frequency), we have used a butter low pass filter for our treatment of EMG signal (a butter filter is a type of linear filter is designed to obtain a constant gain as possible in its bandwidth). The results achieved by using the following equation :
+
+      [b,a]=butter(n,w,ftype)
+
+      [b,a]= Transfer function coefficients of the filter, returned as row vectors
+       n = Filter order
+       w= cutoff frequency/sampling frequency
+       ftype= Filter type
+
+
+The cutoff frequency low-pass is often set at around 250 Hz for surface electrode, the linear envelope is the result of a full rectification and low-pass filtering at sampling frequency 1000 Hz, the filter of order 5 and filter type is 'low' we can see the results in figure~\ref{fig:env}.\par
 
 \begin{figure}
     \hspace*{1.2 cm}
@@ -672,9 +682,9 @@ Filters reduce the amplitude of the signal at a given frequency (cutoff frequenc
 \end{figure}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsubsection{Fourier Transform (FFT) of the EMG signals} \label{sub:FourierTransform(FFT)oftheEMGsignals}
-\par The Total Power Spectrum can be calculated by two frequency parameters: Mean Frequency of the FFT as the mathematical mean of the spectrum curve, Total Power as a the integral under the spectrum curve and Median Frequency of the FFT as the parameter that divides the Total Power area into two equal parts~\cite{Konrad} presented in figure~\ref{fig:spectre}. \par
-Finally the maximum value of the Total Power Spectrum curve can be used to describe frequency characteristics. Within applied EMG-frequency analysis the most important parameters are the mean and the median frequency and their time domain changes in sustained contractions, which is often employed for analysing muscle fatigue.\par
+\subsubsection{Fourier Transform (FFT) of the EMG signals} \label{sub:FourierTransform(FFT)oftheEMGsignals}\par 
+the power distribution of the EMG signal can be calculated by the “Fast Fourier Transformation” (FFT) and graphically presented as a total power
+spectrum of the EMG signal in figure~\ref{fig:spectre}, which shows the frequency power distribution (Y-axis) in ratio to the amplitude (X-axis), the surface EMG frequency power is located between 0 and 200 Hz as we can see in the graph. The purpose of this treatment step is to analyse muscle fatigue.\par
 
 \begin{figure}
     \hspace*{1.2 cm}
