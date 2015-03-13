@@ -633,22 +633,23 @@ The EMG signals acquired from muscles require advanced methods for processing wh
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsubsection{Loading the EMG data} \label{sub:LoadingtheEMGdata}\par
-this step is a presentation of the data without processing, except an amplification of the signal that can be added by the electrode. The raw signal is presented in figure~ \ref{fig:data} in this graph we can see the highest peak which represents a muscle contraction that have a value comprised between (1.2 and 0.5) and 0 represents the muscle rest period.\par
+this step is a presentation of the data without processing, except an amplification of the signal that can be added by the electrode. The raw signal is presented in figure~ \ref{fig:data} in this graph we can see the highest peak which represents a muscle contraction that have a value comprised between (30 and 240) and 30 represents the muscle rest period.\par
 
 \begin{figure}[!hb]
     \hspace*{1.2 cm}
-    \includegraphics[scale=0.40]{Figures/fig1.eps}
+    \includegraphics[scale=0.40]{Figures/data1.eps}
     \caption{EMG Data}
     \label{fig:data}
 \end{figure}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsubsection{Rectification of the EMG signal} \label{sub:RectificationtheEMGsignal}\par
-a full rectification generates the absolute value of EMG signal. Two phases can be distinguished to obtain the rectified signal as follows: eliminate the shift signal and calculate the absolute value of the signal. the results are showed in figure~\ref{fig:rect}.\par
+a full rectification generates the absolute value of EMG signal. Two phases can be distinguished to obtain the rectified signal as follows: eliminate the shift signal and calculate the absolute value of the signal. the results are showed in figure~\ref{fig:rect}, 
+we see that the value of each peak is lower than the previous step.\par
 
 \begin{figure}
     \hspace*{1.2 cm}
-    \includegraphics[scale=0.40]{Figures/fig2.eps}
+    \includegraphics[scale=0.40]{Figures/rect1.eps}
     \caption{the EMG signal Rectification}
     \label{fig:rect}
 \end{figure}
@@ -667,17 +668,18 @@ Filter reduces the amplitude of the signal at a given frequency (cutoff frequenc
       [b,a]=butter(n,w,ftype)
 
       [b,a]= Transfer function coefficients of the filter, returned as row vectors
-       n = Filter order
-       w= cutoff frequency/sampling frequency
-       ftype= Filter type
+      n = Filter order
+      w= cutoff frequency/sampling frequency
+      ftype= Filter type
 
 
-The cutoff frequency low-pass is often set at around 250 Hz for surface electrode, the linear envelope is the result of a full rectification and low-pass filtering at sampling frequency 1000 Hz, the filter of order 5 and filter type is 'low' we can see the results in figure~\ref{fig:env}.\par
+The cutoff frequency low-pass is often set at around 250 Hz for surface electrode, the linear envelope is the result of a full rectification and low-pass filtering at sampling frequency 1000 Hz, the filter of order 5 and filter type is 'low' we can see the results in figure~\ref{fig:env}, 
+we note a decrease in the amplitude of the signal through the filter and the shape of the signal resembles the curve voltage through the linear envelope.\par
 
 \begin{figure}
     \hspace*{1.2 cm}
-    \includegraphics[scale=0.40]{Figures/fig3.eps}
-    \caption{Linear envelope}
+    \includegraphics[scale=0.40]{Figures/filter1.eps}
+    \caption{Linear envelope & low-pass filter}
     \label{fig:env}
 \end{figure}
 
@@ -688,7 +690,7 @@ spectrum of the EMG signal in figure~\ref{fig:spectre}, which shows the frequenc
 
 \begin{figure}
     \hspace*{1.2 cm}
-    \includegraphics[scale=0.40]{Figures/fig4.eps}
+    \includegraphics[scale=0.40]{Figures/fft1.eps}
     \caption{Power Spectrum}
     \label{fig:spectre}
 \end{figure}
